@@ -1,6 +1,6 @@
-# reprodutor_de_musicas
+# Calculadora de Gemas Clash of Clans
 
-A new Flutter application.
+Um simples app que calcula quantas gemas são necessárias para terminar uma construção ou tropa em função do tempo
 
 ## Getting Started
 
