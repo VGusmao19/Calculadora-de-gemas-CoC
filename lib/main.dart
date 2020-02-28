@@ -16,19 +16,21 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   TextEditingController horas = TextEditingController();
-  TextEditingController minutosController = TextEditingController();
-  double qnt_gemas;
+  TextEditingController minutos = TextEditingController();
+  double qntgemas = 0;
 
   void calculate(){
-    double time = double.parse(horas.text)*60;
+    double time = double.parse(horas.text)*60 + double.parse(minutos.text);
     setState(() {
       if(time < 60){
-      qnt_gemas = time/3;
+      qntgemas = time/3;
+      qntgemas.toStringAsFixed(0);
     }else{
       time = time - 60;
-      qnt_gemas = (time/6)+20;
+      qntgemas = (time/6)+20;
+      qntgemas.toStringAsFixed(0);
     }
-    print(qnt_gemas);
+    print(qntgemas.toStringAsFixed(0));
     });
   }
 
@@ -60,7 +62,7 @@ class _HomeState extends State<Home> {
               border: OutlineInputBorder(),
               labelText: 'Minutos',
             ),
-            controller: minutosController,
+            controller: minutos,
           ),
           Container(
             padding: EdgeInsets.only(top:20),
@@ -76,10 +78,10 @@ class _HomeState extends State<Home> {
           ),
           Container(
             child: Text(
-              qnt_gemas.toString(),
-              style: TextStyle(fontSize: 25, color: Colors.blueAccent[700]),
-            )
-          )
+              qntgemas.toStringAsFixed(0) + " gemas",
+              style: TextStyle(fontSize: 30, color: Colors.blueAccent[700]),
+            ),
+          ),
         ],
       ),
     );
