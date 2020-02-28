@@ -1,4 +1,5 @@
 # Calculadora de Gemas Clash of Clans
+![Imagem do app](https://github.com/VGusmao19/Calculadora-de-gemas-CoC/blob/master/print%20gema%20clash.jpg)
 
 Um simples app que calcula quantas gemas são necessárias para terminar uma construção ou tropa em função do tempo
 
